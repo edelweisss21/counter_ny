@@ -1,0 +1,140 @@
+@import 'reset.min.css';
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #444444;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px;
+  background: url("../img/bg.jpg");
+  background-size: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+.text {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.countdown-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  height: 100vh;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;
+  line-height: 1;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  min-width: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 15px;
+  margin-top: 60px;
+}
+
+.preloader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 65px;
+}
+
+.preloader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.preloader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.preloader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.preloader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .title {
+    font-size: 45px;
+  }
+  .year {
+    font-size: 150px;
+  }
+  .text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 26px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .year {
+    font-size: 130px;
+  }
+  .text {
+    font-size: 18px;
+  }
+}
